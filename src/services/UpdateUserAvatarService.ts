@@ -2,7 +2,9 @@ import { getRepository } from 'typeorm';
 import path from 'path';
 import fs from 'fs';
 
-import uplodaConfig from '../config/upload';
+import uploadConfig from '../config/upload';
+
+import AppError from '../errors/AppError';
 
 import User from '../models/User';
 interface Request {
@@ -17,11 +19,11 @@ class UpdateUserAvatarService {
     const user = await usersRepository.findOne(user_id);
 
     if (!user) {
-      throw new Error('Only authenticated users can change avatar.');
+      throw new AppError('Only authenticated users can change avatar.', 401);
     }
 
     if (user.avatar) {
-      const userAvatarPath = path.join(uplodaConfig.directory, user.avatar);
+      const userAvatarPath = path.join(uploadConfig.directory, user.avatar);
       const userAvatarFileExists = await fs.promises.stat(userAvatarPath);
 
       if (userAvatarFileExists) {
