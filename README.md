@@ -15,8 +15,8 @@
 
 **RN**
 
-- O link enviado por email para resetar senha, deve expirar em 2h
-- O usuário precisa confirmar a nova senha ao resetar a antiga
+- The link sent by email to reset password, must expire in 2h
+- The user needs to confirm the new password when resetting the old one
 
 #Profile update
 **RF**
