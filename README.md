@@ -1,6 +1,7 @@
 #GoStack GoBarber Backend
 
 #Password recovery
+
 **RF**
 
 - The user must be able to recover his password informing his email
@@ -19,6 +20,7 @@
 - The user needs to confirm the new password when resetting the old one
 
 #Profile update
+
 **RF**
 
 - The user must be able to update his profile: Name, email, password and avatar
@@ -30,6 +32,7 @@
 - To update his password, the user needs to confirm the new password
 
 #Provider panel
+
 **RF**
 
 - The provider must be able to list their schedules for a specific day
@@ -47,6 +50,7 @@
 - The notification must have a read or unread status so that the provider can control
 
 #Scheduling services
+
 **RF**
 
 - The user must be able to list all registered service providers
